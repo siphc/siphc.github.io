@@ -186,103 +186,77 @@ a:hover::before {
 }
 
 .job, .project {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   padding: 0;
-  background: rgba(26, 29, 35, 0.6);
-  border: 2px solid var(--accent);
+  background: rgba(26, 29, 35, 0.3);
+  border: 1px solid var(--accent);
+  border-left: 3px solid var(--accent);
   position: relative;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .job::before, .project::before {
-  content: '┌─ ' attr(data-type) ' ─────────────────────────────────────────┐';
+  content: '// ' attr(data-type) ' ──';
   display: block;
-  padding: 0.5rem 1rem;
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--accent);
-  color: var(--accent-bright);
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.job::after, .project::after {
-  content: '└────────────────────────────────────────────────┘';
-  display: block;
-  padding: 0.3rem 1rem;
-  background: var(--bg-primary);
-  border-top: 1px solid var(--accent);
-  color: var(--accent);
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .job > *, .project > * {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .job > *:first-of-type, .project > *:first-of-type {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .job > *:last-child, .project > *:last-child {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .job h3, .project h3 {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-  position: relative;
-  padding-left: 2.5rem;
-}
-
-.job h3::before, .project h3::before {
-  content: '>';
-  position: absolute;
-  left: 1.5rem;
-  color: var(--accent-bright);
-  font-weight: bold;
 }
 
 .job:hover, .project:hover {
-  border-color: var(--accent-bright);
-  box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(212, 165, 116, 0.1);
-  transform: translateY(-2px);
+  border-left-color: var(--accent-bright);
+  background: rgba(26, 29, 35, 0.5);
 }
 
 .job:hover::before, .project:hover::before {
-  background: rgba(26, 29, 35, 0.9);
   color: var(--accent-bright);
 }
 
 ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 ul li {
-  padding-left: 2.5rem;
-  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0.3rem;
   position: relative;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 ul li::before {
-  content: '$';
+  content: '>';
   position: absolute;
-  left: 1.5rem;
-  color: var(--accent-bright);
+  left: 0;
+  color: var(--accent);
   font-weight: bold;
-  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
 }
 
 .project-link {
