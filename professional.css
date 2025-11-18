@@ -33,6 +33,18 @@ body {
   line-height: 1.7;
   padding: 3rem 2rem;
   min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+  --bg-primary: #f5f5f0;
+  --bg-secondary: #e8e8e0;
+  --text-primary: #2a2a2a;
+  --text-secondary: #5a5a5a;
+  --accent: #a67c52;
+  --accent-bright: #8b6840;
+  --border: #d0d0c8;
+  background: linear-gradient(135deg, #f5f5f0 0%, #ededea 50%, #e8e8e0 100%);
 }
 
 body::before {
@@ -47,6 +59,13 @@ body::before {
     repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(232, 220, 199, 0.02) 2px, rgba(232, 220, 199, 0.02) 4px);
   pointer-events: none;
   z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+body.light-mode::before {
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(42, 42, 42, 0.03) 2px, rgba(42, 42, 42, 0.03) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(42, 42, 42, 0.03) 2px, rgba(42, 42, 42, 0.03) 4px);
 }
 
 .breadcrumb {
@@ -56,6 +75,27 @@ body::before {
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
   margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.theme-toggle-btn {
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-family: 'caskaydia-cove', monospace;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent-bright);
 }
 
 .intro {

@@ -11,7 +11,7 @@
 
 <nav class="breadcrumb">
 <a href="index.html">&lt;&lt;&lt; back to home</a>
-<a href="#" class="action-btn">Button Text</a>
+<button id="theme-toggle" class="theme-toggle-btn">toggle theme</button>
 </nav>
 
 <header class="intro">
@@ -101,6 +101,21 @@
 <footer>
 <p><a href="index.html">&lt;&lt;&lt; back to home</a></p>
 </footer>
+
+<script>
+const themeToggle = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'light') {
+  document.body.classList.add('light-mode');
+}
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  const currentTheme = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+  localStorage.setItem('theme', currentTheme);
+});
+</script>
 
 </body>
 </html>
