@@ -239,6 +239,51 @@ The site itself references these concepts:
 
 For questions about the site content or design decisions, refer to the contact section in index.html (index.html:25).
 
+## General Frontend Aesthetics Guidance
+
+**⚠️ IMPORTANT CONTEXT FOR THIS REPOSITORY:**
+
+The following aesthetic guidance represents general best practices for frontend design. However, **for this specific repository, the minimalist philosophy documented above takes absolute precedence**. These guidelines are included for completeness but should be applied with extreme restraint and only where they align with the site's core principles of simplicity, speed, and accessibility.
+
+### Frontend Aesthetics Principles
+
+You tend to converge toward generic, "on distribution" outputs. In frontend design, this creates what users call the "AI slop" aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight. Focus on:
+
+**Typography:** Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics.
+
+**Color & Theme:** Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes. Draw from IDE themes and cultural aesthetics for inspiration.
+
+**Motion:** Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions.
+
+**Backgrounds:** Create atmosphere and depth rather than defaulting to solid colors. Layer CSS gradients, use geometric patterns, or add contextual effects that match the overall aesthetic.
+
+**Avoid generic AI-generated aesthetics:**
+- Overused font families (Inter, Roboto, Arial, system fonts)
+- Clichéd color schemes (particularly purple gradients on white backgrounds)
+- Predictable layouts and component patterns
+- Cookie-cutter design that lacks context-specific character
+
+Interpret creatively and make unexpected choices that feel genuinely designed for the context. Vary between light and dark themes, different fonts, different aesthetics. You still tend to converge on common choices (Space Grotesk, for example) across generations. Avoid this: it is critical that you think outside the box!
+
+### Application to This Repository
+
+**For this specific site, apply these principles MINIMALLY:**
+
+✅ **What you CAN do:**
+- Choose a distinctive monospace font from system fonts (if available)
+- Refine the existing color palette while keeping it simple
+- Add subtle, performant CSS-only hover effects (sparingly)
+- Use CSS variables for color consistency (if it doesn't bloat the CSS)
+
+❌ **What you CANNOT do (conflicts with minimalist philosophy):**
+- Load external web fonts (violates no-dependencies rule)
+- Add complex animations or motion (violates simplicity rule)
+- Use gradient backgrounds or patterns (violates minimal CSS rule)
+- Increase CSS beyond ~500 bytes (violates performance budget)
+- Add JavaScript for any aesthetic purpose (strict no-JS policy)
+
+**Remember:** This site intentionally embraces the "boring" aesthetic as a statement against overdesigned web. The goal is to prove that simple HTML + minimal CSS is sufficient. When in doubt, choose simplicity over creativity for this particular project.
+
 ---
 
 **Last Updated:** 2025-11-18
