@@ -117,7 +117,7 @@ body.light-mode::before {
   object-fit: cover;
   border: 4px solid var(--accent);
   box-shadow:
-    8px 8px 0 var(--bg-primary),
+    8px 8px 0 var(--bg-secondary),
     8px 8px 0 2px var(--accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -125,7 +125,7 @@ body.light-mode::before {
 .profile-pic:hover {
   transform: translate(-4px, -4px);
   box-shadow:
-    12px 12px 0 var(--bg-primary),
+    12px 12px 0 var(--bg-secondary),
     12px 12px 0 2px var(--accent-alt);
 }
 
@@ -254,7 +254,7 @@ a:hover::before {
   padding: 0.4rem 1rem;
   background: transparent;
   border-bottom: 1px solid var(--accent);
-  opacity: 0.4;
+  opacity: 0.5;
   color: var(--text-secondary);
   font-size: 0.8rem;
   letter-spacing: 0.02em;
@@ -344,6 +344,10 @@ ul li::before {
   }
 
   .job, .project {
-    padding: 1rem;
+    padding: 0.8rem;
+  }
+
+  .job::before, .project::before {
+    padding: 0 0.6rem 0.6rem;
   }
 }
