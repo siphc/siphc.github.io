@@ -6,6 +6,7 @@
   --accent: #d4a574;
   --accent-alt: #e8b881;
   --border: #3a3d45;
+  overscroll-behavior: none;
 }
 
 * {
@@ -22,10 +23,6 @@
 @font-face {
   font-family: "spectral";
   src: url(fonts/Spectral-Regular.woff2);
-}
-
-html {
-  background-color: val(--bg-primary);
 }
 
 body {
