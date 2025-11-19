@@ -116,13 +116,17 @@ body.light-mode::before {
   height: 140px;
   object-fit: cover;
   border: 4px solid var(--accent);
-  box-shadow: 8px 8px 0 2px var(--accent);
+  box-shadow:
+    8px 8px 0 var(--bg-primary),
+    8px 8px 0 2px var(--accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-pic:hover {
   transform: translate(-4px, -4px);
-  box-shadow: 12px 12px 0 2px var(--accent-alt);
+  box-shadow:
+    12px 12px 0 var(--bg-primary),
+    12px 12px 0 2px var(--accent-alt);
 }
 
 .header-text {
@@ -237,11 +241,11 @@ a:hover::before {
 .job, .project {
   margin-bottom: 2rem;
   padding: 0;
-  background: rgba(26, 29, 35, 0.08);
+  background: rgba(26, 29, 35, 0.05);
   border: 2px solid var(--accent);
   position: relative;
   font-family: 'caskaydia-cove', monospace;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 .job::before, .project::before {
@@ -254,6 +258,7 @@ a:hover::before {
   color: var(--text-secondary);
   font-size: 0.8rem;
   letter-spacing: 0.02em;
+  transition: color 0.3s ease;
 }
 
 .job > *, .project > * {
@@ -277,12 +282,10 @@ a:hover::before {
 
 .job:hover, .project:hover {
   border-color: var(--accent-alt);
-  background: rgba(26, 29, 35, 0.15);
 }
 
 .job:hover::before, .project:hover::before {
   color: var(--accent-alt);
-  opacity: 0.6;
 }
 
 ul {
