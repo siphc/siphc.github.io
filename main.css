@@ -24,6 +24,10 @@
   src: url(fonts/Spectral-Regular.woff2);
 }
 
+html {
+  background-color: val(--bg-primary);
+}
+
 body {
   position: relative;
   background: linear-gradient(135deg, #1a1d23 0%, #1e2128 50%, #23262e 100%);
