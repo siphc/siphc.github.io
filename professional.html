@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="main.css">
+<title>William Pan</title>
+</head>
+<body>
+
+<nav class="breadcrumb">
+<a href="index.html">&lt;&lt;&lt; home</a>
+<button id="theme-toggle" class="theme-toggle-btn">toggle theme</button>
+</nav>
+
+<header class="intro">
+<div class="header-content">
+<img src="images/profile.webp" alt="Profile picture" class="profile-pic">
+<div class="header-text">
+<h1>William Pan (siphc)</h1>
+<p class="tagline">Embedded Systems • Low-Level Development • Performance Optimization</p>
+</div>
+</div>
+</header>
+
+<section class="about">
+<h2>Introduction</h2>
+<p>TODO</p>
+</section>
+
+<section class="experience">
+<h2>Work Experience</h2>
+
+<article class="job" data-file="employment/swe-intern-2026">
+<h3>Software Engineering Intern</h3>
+<p class="meta">Capital One • 2026</p>
+<ul>
+<li>Incoming</li>
+</ul>
+</article>
+
+<article class="job" data-file="employment/research-intern-2025">
+<h3>Research Intern</h3>
+<p class="meta">VAST • 2025 - Present</p>
+<ul>
+<li>Built a graph neural network to evaluate High-Level Synthesis (HLS) designs</li>
+<li>Estimated HLS designs in milliseconds with high accuracy, resulting in an up to 79X speedup for optimizing the design</li>
+</ul>
+</article>
+
+<article class="job" data-file="employment/embedded-dev-2025">
+<h3>Embedded Developer</h3>
+<p class="meta">Synaptics • 2025</p>
+<ul>
+<li>Co-created a real-time subtitle generation & translation system on the Synaptics Astra Embedded Processor; demo exhibited in IBC 2025</li>
+<li>Updated, debugged, and improved portability of Embedded SL1620 boards with emulated eMMC images with Synaptics' usb-tool driver</li>
+</ul>
+</article>
+</section>
+
+<section class="projects">
+<h2>Selected Projects</h2>
+
+<article class="project" data-file="projects/lox-lang-2025">
+<h3>C-like Scripting Language Interpreter</h3>
+<p class="meta">Java, C • 2025</p>
+<p>Work in progress</p>
+<a href="https://github.com" class="project-link">view source &gt;&gt;</a>
+</article>
+
+<article class="project" data-file="projects/optica-industries-erp-2025">
+<h3>Optica Industries ERP System</h3>
+<p class="meta">JavaScript, React, Node.js • 2025</p>
+<p>Desc</p>
+<a href="https://github.com" class="project-link">view source &gt;&gt;</a>
+</article>
+
+<article class="project" data-file="projects/wonky-kong-2024">
+<h3>Donkey Kong (1981) Remake</h3>
+<p class="meta">C++, OpenGL • 2024</p>
+<p>Desc</p>
+<a href="https://github.com/siphc/wonky-kong" class="project-link">view source &gt;&gt;</a>
+</article>
+</section>
+
+<section class="contact">
+<h2>Contact</h2>
+<p>Email: <a href="mailto:ayfpan@ucla.edu">ayfpan@ucla.edu</a></p>
+<p>GitHub: <a href="https://github.com/siphc">github.com/siphc</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/ayfpan/">linkedin.com/in/ayfpan</a></p>
+</section>
+
+<footer>
+<p><a href="index.html">&lt;&lt;&lt; back to home</a></p>
+</footer>
+
+<script>
+const themeToggle = document.getElementById('theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+});
+</script>
+
+</body>
+</html>
