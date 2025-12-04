@@ -171,7 +171,7 @@ section {
 }
 
 .lite {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .about, .prof-link { animation-delay: 0.2s; }
