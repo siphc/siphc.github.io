@@ -151,6 +151,14 @@ body.light-mode::after {
     12px 12px 0 2px var(--accent-alt);
 }
 
+.eff {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 140px;
+  width: 140px;
+}
+
 .header-text {
   flex: 1;
 }
@@ -162,9 +170,13 @@ section {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.about { animation-delay: 0.2s; }
-.experience { animation-delay: 0.3s; }
-.projects { animation-delay: 0.4s; }
+.lite {
+  margin: 0;
+}
+
+.about, .prof-link { animation-delay: 0.2s; }
+.experience, .readings { animation-delay: 0.3s; }
+.projects, .quotes { animation-delay: 0.4s; }
 .contact { animation-delay: 0.5s; }
 
 footer {
@@ -175,6 +187,10 @@ footer {
   text-align: center;
   opacity: 0;
   animation: fadeInUp 0.6s ease-out 0.6s forwards;
+}
+
+.early {
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
 }
 
 @keyframes fadeInUp {
